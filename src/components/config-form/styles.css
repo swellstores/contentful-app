@@ -1,0 +1,11 @@
+#app-config {
+  margin: 50px auto;
+  width: 700px;
+  padding: 30px 50px;
+}
+
+#app-config hr {
+  border: 0px;
+  height: 1px;
+  background-color: rgb(211, 220, 224);
+}

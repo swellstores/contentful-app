@@ -1,0 +1,60 @@
+.entry-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-field img + * {
+  margin-left: 15px;
+}
+
+.entry-field .actions {
+  display: flex;
+}
+
+.entry-field .products {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.entry-field .products + .actions {
+  margin-top: 15px;
+}
+
+.entry-field .product {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  padding-right: 30px;
+  border: 1px solid rgb(229, 235, 237);
+  border-radius: 3px;
+  box-shadow: rgba(48, 114, 190, 0) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 1px 3px;
+}
+
+.entry-field .product .title {
+  display: flex;
+  align-items: center;
+}
+
+.entry-field .product .delete {
+  position: absolute;
+  right: 10px;
+}
+
+.entry-field .product .description > * + * {
+  margin-top: 8px;
+}
+
+.entry-field .product .description .name {
+  font-size: 16px;
+}
+
+.entry-field .product img {
+  width: 50px;
+  height: 50px;
+}

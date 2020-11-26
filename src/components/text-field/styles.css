@@ -1,0 +1,10 @@
+.text-field input {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 4px;
+  box-shadow: none !important;
+}
+
+.text-field.error input {
+  border-color: rgb(207, 80, 101);
+}

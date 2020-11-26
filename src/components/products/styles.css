@@ -1,0 +1,149 @@
+.dialog {
+  height: 1030px;
+}
+
+.dialog hr {
+  border: 0px;
+  height: 1px;
+  background-color: rgb(211, 220, 224);
+}
+
+.dialog .no-result {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.dialog .header {
+  padding: 5px 20px 15px 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: calc(100% - 2rem);
+  top: 0;
+  background-color: white;
+  z-index: 1;
+  border-bottom: 1px solid rgb(211, 220, 224);
+}
+
+.dialog .header .search-input {
+  width: 100%;
+  margin-right: 10px;
+}
+
+.dialog .header .search-input .icon {
+  position: absolute;
+  margin-left: 7px;
+  margin-top: 7px;
+  z-index: 2;
+}
+
+.dialog .header .search-input .input input {
+  padding-left: 35px;
+  border-radius: 4px;
+}
+
+.dialog .header .search-input .help-text {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.dialog .header .save {
+  min-width: 160px;
+  margin-left: 10px;
+}
+
+.dialog .header .selected-products {
+  display: flex;
+}
+
+.dialog .header .selected-product {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d3dce0;
+  box-shadow: rgba(48, 114, 190, 0) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 1px 3px;
+  padding: 3px;
+}
+
+.dialog .header .selected-product img,
+.dialog .header .selected-product > span,
+.dialog .header .selected-product.empty {
+  width: 30px;
+  height: 30px;
+}
+
+.dialog .header .selected-product.error {
+  border-color: rgb(207, 80, 101);
+}
+
+.dialog .header .selected-products > * + * {
+  margin-left: 5px;
+}
+
+.dialog .results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.dialog .products {
+  display: grid;
+  padding: 20px;
+  padding-top: 100px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  column-gap: 25px;
+  row-gap: 25px;
+  overflow-x: auto;
+  max-height: 850px;
+}
+
+.dialog .pagination {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.dialog .page {
+  cursor: pointer;
+  background-color: #e5ebed;
+  border: 0.0625rem solid #c3cfd5;
+}
+
+.dialog .page:focus,
+.dialog .page-link:focus {
+  outline: none;
+}
+
+.dialog .page-active {
+  border-color: #3072be;
+  background-image: linear-gradient(0deg, #3c80cf, #5b9fef);
+}
+
+.dialog .page-link {
+  color: #536171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.dialog .page-link-active {
+  color: #f7f9fa;
+}
+
+.dialog .page:not(:first-child):not(:last-child):nth-child(2n) {
+  border-left: none;
+  border-right: none;
+}
