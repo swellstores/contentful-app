@@ -13,7 +13,7 @@ export class Product extends React.Component {
     return product.image ? (
       <Image src={`${product.image}?padded=true&height=${IMG_HEIGHT}&width=${IMG_WIDTH}`} />
     ) : (
-      <Image svgType="empty-product" height={IMG_HEIGHT} width={IMG_WIDTH} />
+      <Image type="empty-product" height={IMG_HEIGHT} width={IMG_WIDTH} />
     );
   }
 

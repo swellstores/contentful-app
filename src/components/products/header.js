@@ -22,11 +22,7 @@ export class Header extends React.Component {
               src={`${product.image}?padded=true&height=${IMG_SELECTED_HEIGHT}&width=${IMG_SELECTED_WIDTH}`}
             />
           ) : (
-            <Image
-              svgType="empty-product"
-              height={IMG_SELECTED_HEIGHT}
-              width={IMG_SELECTED_WIDTH}
-            />
+            <Image type="empty-product" height={IMG_SELECTED_HEIGHT} width={IMG_SELECTED_WIDTH} />
           )}
         </div>
       </Tooltip>
@@ -88,7 +84,7 @@ export class Header extends React.Component {
           icon="CheckCircle"
           onClick={onSubmit}
         >
-          {multiselect ? 'Save products' : 'Save a product'}
+          {multiselect ? 'Save products' : 'Save product'}
         </Button>
       </div>
     );

@@ -17,7 +17,7 @@ export class ProductImage extends React.Component {
             src={`${image}?padded=true&height=${height || IMG_HEIGHT}&width=${width || IMG_WIDTH}`}
           />
         ) : (
-          <Image svgType="empty-product" height={height || IMG_HEIGHT} width={width || IMG_WIDTH} />
+          <Image type="empty-product" height={height || IMG_HEIGHT} width={width || IMG_WIDTH} />
         )}
       </div>
     );

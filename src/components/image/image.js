@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './svg/logo.svg';
 import Default from './img/default.png';
-import EmptyProduct from './svg/empty-product.svg';
+import EmptyProduct from './img/empty-product.png';
 import NoResult from './img/no-result.png';
 import './styles.css';
 
