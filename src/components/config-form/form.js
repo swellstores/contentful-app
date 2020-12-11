@@ -90,23 +90,23 @@ class ConfigForm extends React.Component {
     return (
       <Card id="app-config">
         <Form>
-          <Heading>Swell Contentful App</Heading>
+          <Heading>Swell for Contentful</Heading>
           <Paragraph>
-            The Swell Contentful App allows editors to select products from their Swell store and
-            reference them inside of Contentful entries.
+            This app allows editors to select products from their Swell store and reference them in
+            Contentful entries.
           </Paragraph>
           <hr />
           <Subheading>Configuration</Subheading>
           <Paragraph>
-            To configure the application, you need to specify your <b>Store ID</b> and{' '}
-            <b>Public key</b>. Credentials can be obtained in your Swell Store settings (Settings
-            -&gt; API keys).
+            To set up the app, you need to provide your <em>Store ID</em> and a <em>Public key</em>.
+            These can be obtained from your Swell admin dashboard in <b>Settings &rarr; API keys</b>
+            .
           </Paragraph>
           <TextField
             id="store-id"
             name="storeId"
             labelText="Store ID"
-            helpText="Please enter your store ID"
+            helpText="The subdomain where you access your Swell admin dashboard"
             value={parameters.storeId || ''}
             onChange={onChange}
             validationMessage={errors.storeId}
@@ -116,15 +116,15 @@ class ConfigForm extends React.Component {
             id="public-key"
             name="publicKey"
             labelText="Public key"
-            helpText="Please enter your public key"
+            helpText="A Swell public key (starts with 'pk_')"
             value={parameters.publicKey || ''}
             onChange={onChange}
             validationMessage={errors.publicKey}
             required
           />
           <CheckboxField
-            labelText="Variant selection"
-            helpText="This option allows you to select product variants"
+            labelText="Enable variant selection"
+            helpText="Allow editors to select product variants (values are saved as '{productId}:{variantId}')"
             name="variantSelection"
             id="variant-selection"
             onChange={onChange}
