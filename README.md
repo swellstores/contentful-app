@@ -20,6 +20,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
+## Installing to Contentful space
+
+1. Create a new private app called 'Swell'.
+2. In the _App URL_ field, insert the URL where the app is running.
+3. Under _Locations_, check _App configuration screen_, _Entry field_, and the _Short text_ + _Short text, list_ field types.
+
 ## Libraries to use
 
 To make your app look and feel like Contentful use the following libraries:
