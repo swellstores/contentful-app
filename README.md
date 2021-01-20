@@ -23,8 +23,11 @@ Your app is ready to be deployed!
 ## Installing to Contentful space
 
 1. Create a new private app called 'Swell'.
-2. In the _App URL_ field, insert the URL where the app is running.
+2. In the _App URL_ field, enter `https://swell-contentful-picker.vercel.app`.
 3. Under _Locations_, check _App configuration screen_, _Entry field_, and the _Short text_ + _Short text, list_ field types.
+4. Save the configuration and click _Install to space_
+5. Enter the Swell store ID and public key, and select which fields to use the product picker for.
+6. Click _Save_. The app is now ready to use.
 
 ## Libraries to use
 
