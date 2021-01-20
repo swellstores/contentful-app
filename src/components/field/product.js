@@ -1,5 +1,4 @@
 import React from 'react';
-import { isEmpty, map, toString } from 'lodash';
 import { Paragraph, DisplayText, IconButton } from '@contentful/forma-36-react-components';
 import Image from '../image';
 
