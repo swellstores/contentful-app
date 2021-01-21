@@ -1,3 +1,20 @@
+# Swell for Contentful
+This app enables the selection of products (and product variants) from a Swell store on **Short text** or **Short text, list** fields.
+
+- When variant selection is disabled, the selected product's ID is saved as the field value.
+- When variant selection is enabled, the field value will be in the format `{productID}:{variantID}`.
+
+## Installing the app
+
+1. In your Contentful organization, create a new private app called 'Swell'.
+2. Enter `https://swell-contentful-picker.vercel.app` in the **App URL** field.
+3. Under Locations, select **App configuration screen**, **Entry field**, and the **Short text** and/or **Short text, list** field types.
+4. Save the configuration and click **Install to space**
+5. Enter the Swell store ID and public key, and select which fields to use the product picker for.
+6. Click **Save**. The app is now ready to use.
+
+---
+
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
 ## Available Scripts
@@ -19,15 +36,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
-
-## Installing to Contentful space
-
-1. Create a new private app called 'Swell'.
-2. In the _App URL_ field, enter `https://swell-contentful-picker.vercel.app`.
-3. Under _Locations_, check _App configuration screen_, _Entry field_, and the _Short text_ + _Short text, list_ field types.
-4. Save the configuration and click _Install to space_
-5. Enter the Swell store ID and public key, and select which fields to use the product picker for.
-6. Click _Save_. The app is now ready to use.
 
 ## Libraries to use
 
