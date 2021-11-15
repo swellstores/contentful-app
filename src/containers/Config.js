@@ -25,7 +25,7 @@ class Config extends React.Component {
   }
 
   async onConfigure() {
-    const { parameters, ids } = this.state;
+    const { parameters } = this.state;
 
     if (!parameters.storeId || !parameters.publicKey) {
       return false;
@@ -42,7 +42,9 @@ class Config extends React.Component {
               return acc;
             }
 
-            const field = { fieldId, widgetId: ids.app, widgetNamespace: 'app' };
+            const field = {
+              fieldId,
+            };
 
             if (acc[contentType]) {
               acc[contentType].controls.push(field);
