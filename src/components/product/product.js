@@ -41,6 +41,7 @@ export class Product extends React.Component {
             <Select
               options={map(variants, (variant) => ({
                 value: variant.id,
+                id: variant.id,
                 name: variant.name,
               }))}
               onChange={this.onChange}
