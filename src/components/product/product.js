@@ -21,6 +21,13 @@ export class Product extends React.Component {
   render() {
     const { product, value, className, selected, variantSelection, onClick } = this.props;
 
+    const newDigitalVariants = product.purchase_options?.subscription?.plans?.flat(1);
+    let variants = product.variants.results;
+
+    if (newDigitalVariants) {
+       variants = variants.concat(newDigitalVariants);
+    }
+
     return (
       <div
         className={cx('product', className, { selected })}
@@ -30,10 +37,11 @@ export class Product extends React.Component {
         {selected && <Icon icon="CheckCircle" size="large" className="selected" />}
         <div className="view">
           <ProductImage product={product} height={250} width={250} />
-          {variantSelection && !isEmpty(product.variants.results) && (
+          {variantSelection && !isEmpty(variants) && (
             <Select
-              options={map(product.variants.results, (variant) => ({
+              options={map(variants, (variant) => ({
                 value: variant.id,
+                id: variant.id,
                 name: variant.name,
               }))}
               onChange={this.onChange}
