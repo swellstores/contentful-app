@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { isEmpty, map } from 'lodash';
+import { isEmpty, map, get } from 'lodash';
 import { Icon } from '@contentful/forma-36-react-components';
 import ProductImage from './image';
 import ProductDescription from './description';
@@ -21,11 +21,11 @@ export class Product extends React.Component {
   render() {
     const { product, value, className, selected, variantSelection, onClick } = this.props;
 
-    const newDigitalVariants = product.purchase_options?.subscription?.plans?.flat(1);
+    const newDigitalVariants = get(product, 'purchase_options.subscription.plans');
     let variants = product.variants.results;
 
     if (newDigitalVariants) {
-       variants = variants.concat(newDigitalVariants);
+       variants = variants.concat(newDigitalVariants.flat(1));
     }
 
     return (
